@@ -1,0 +1,29 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[polish, english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{amssymb} %rzuca błędem
+
+\author{Paweł Z., Paweł S.}
+\title{Klasyfikator jakości Win portugalskich wykorzystujący SVM}
+\begin{document}
+\maketitle
+\section{Instalacja}
+Używamy wersji Shogun 0.9.3
+\subsection{Linux}
+
+Na platformę Linux, Shogun dostępny jest w wersji binarnej dla dystrybucji Debian i Ubuntu.
+W przypadku pozostałych dystrybucji konieczna jest kompilacja źródeł, która wymaga, w zależności od 
+instalowanych modułów, dodatkowych bibliotek. Proces kompilacji przebiega standardowo przy użyciu skryptu configure oraz make'a, jednak nie jest on pozbawiony błędów, o których nie wspomniano w dokumentacji.
+
+Na przykład dla Fedory 13 instalacja interfejsu Shogun Octave wymaga zainstalowania pakietów octave-devel, swig. Pakiety można automatyczne zainstalować używając menedżera pakietów yum. W fazie konfiguracji kompilacji, do polecenia ./configure należy dołączyć flagę --disable-hdf5, ze względu na niekompatybilność pakietu Shogun z biblioteką hdf5 na Fedorze 13. Niedołączenie flagi powoduje błąd kompilacji. 
+
+
+\subsection{Windows}
+Nie działa!? Problemy z kompilacją pod Cygwinem.
+
+\end{document}
