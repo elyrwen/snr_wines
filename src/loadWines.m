@@ -3,7 +3,7 @@ function [redDataSet, whiteDataSet] = loadWines()
 % Funkcja wczytująca zbiór danych i przekształcająca go do odpowiedniej postaci:
 % - poszczególne elementy zbioru w wierszach
 % - ostatnia kolumna z atrybutem klasy
-% - tylko dwie klasy {0,1}
+% - tylko dwie klasy {-1,+1}
 % - skalowanie poszczególnych atrybutów do przedziału [-0.5,0.5]
 
 	redDataSet = prepareDataSet('data/winequality-red.csv');
@@ -27,7 +27,7 @@ function dataSet = prepareClassColumn(dataSet)
 	firstClassIndices = dataSet(:,idx) <= middleValue;
 	secondClassIndices = dataSet(:,idx) > middleValue;
 	
-	dataSet(firstClassIndices,idx) = 0;
+	dataSet(firstClassIndices,idx) = -1;
 	dataSet(secondClassIndices,idx) = 1;
 end
 
